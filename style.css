@@ -1,0 +1,57 @@
+body {
+    background-color: #F1F5F9;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Плавная прокрутка для списков */
+#search-results,
+#branch-list {
+    scrollbar-width: thin;
+    scrollbar-color: #CBD5E1 transparent;
+}
+
+#search-results::-webkit-scrollbar,
+#branch-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+#search-results::-webkit-scrollbar-thumb,
+#branch-list::-webkit-scrollbar-thumb {
+    background-color: #CBD5E1;
+    border-radius: 3px;
+}
+
+/* Анимации */
+.fade-in {
+    animation: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Убираем стрелки у input number */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Стили для фокуса */
+.input-field:focus {
+    border-color: #2563EB;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+/* Нижняя панель для мобильных */
+.mobile-bottom-bar {
+    padding-bottom: env(safe-area-inset-bottom);
+}
